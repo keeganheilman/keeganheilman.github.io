@@ -1,0 +1,55 @@
+
+@keyframes animate{
+	0% {
+	  background-position: 100% 0;
+	}
+	50% {
+	  background-position: 0 100%;
+	}
+	100% {
+		background-position: 100% 0;
+	  }
+  }
+
+html {
+	background: url("../assets/bg_transparent.png") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-color: #b3b3b3;
+
+}
+
+#TimerDisplay {
+	color: #f3f3f3;
+	font-family: 'Liberation Sans Narrow', sans-serif;
+	font-style: italic;
+	font-size: 40em;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	-webkit-transform: rotate(-90deg);
+	
+}
+
+
+#Title {
+	position: absolute;
+	width: 100%;
+
+}
+
+#Title h2{
+	text-align: center;
+	margin: 0;
+	line-height: 1;
+	font-family: 'FreeSans';
+	font-size: 10em;
+	color: transparent;
+	text-transform: uppercase;
+	background-image:linear-gradient(to left, #93673e, #397fc8);
+	-webkit-background-clip: text;
+	animation: animate 12s linear infinite;
+	-webkit-background-size: 500%;
+	background-size: 500%;
+}
