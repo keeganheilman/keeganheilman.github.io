@@ -2,20 +2,29 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>pomodoroz</title>
+	<title>pomodoro</title>
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<button>Click to draw</button>
 <div id="Title">
-<span>
-<h2>FOCUS TIME</h2>
-<h2>FOCUS TIME</h2>
-<h2>FOCUS TIME</h2>
-</span>
+	<span>
+		<h2>FOCUS TIME</h2>
+		<h2>FOCUS TIME</h2>
+		<h2>FOCUS TIME</h2>
+	</span>
+</div>
 <div id="Timer">
 <p id="TimerDisplay">00:00:00</p>
 </div>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<div class="svg_wrapper">
+	<svg viewBox="0 0 350 350">
+			  <path d="M 175, 175 m 0, -75 a 75,75 0 1,0 0,150 a 75,75 0 1,0 0,-150" fill="none" stroke="black" stroke-width="150" stroke-dasharray="0 600 600 0" stroke-dashoffset="1000">
+				  <animate attributeType="XML" attributeName="stroke-dashoffset" from="0" to="600" dur="2s" repeatCount="1" fill="freeze" />
+			  </path>
+		  </svg>
+  </div>
 <script>
 function startTimer(duration, display) {
 	var timer = duration, hour, minutes, seconds;
@@ -42,6 +51,11 @@ var time = 3600 * 2, // your time in seconds here
 display = document.querySelector('#TimerDisplay');
 startTimer(time, display);
 };
+
+
+$('button').click(function() {
+	document.getElementById('vbanim').beginElement();
+  })
 
 </script>
 </body>

@@ -11,7 +11,31 @@
 	  }
   }
 
-html {
+
+@keyframes change {
+	to {
+			background-position:right;
+		}
+	}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.svg_wrapper {
+	border: 0px solid grey;
+	width: 800px;
+	margin: auto;
+}
+
+svg {
+	display: block;
+	margin: auto;
+}
+
+body {
 	background: url("../assets/bg_transparent.png") no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -23,23 +47,26 @@ html {
 
 #TimerDisplay {
 	color: #f3f3f3;
+	display:block;
 	font-family: 'Liberation Sans Narrow', sans-serif;
 	font-style: italic;
 	font-size: 40em;
 	position: absolute;
+	margin-left: 1em;
+	margin-top: .9em;
+
 	transform: translate(-50%, -50%);
 	-webkit-transform: rotate(-90deg);
 	
 }
 
-
-#Title {
+div span h2{
 	position: absolute;
 	width: 100%;
 
 }
 
-#Title h2{
+div span h2{
 	text-align: center;
 	margin: 0;
 	line-height: 1;
@@ -47,9 +74,18 @@ html {
 	font-size: 10em;
 	color: transparent;
 	text-transform: uppercase;
-	background-image:linear-gradient(to left, #93673e, #397fc8);
+	background-image:linear-gradient(to left,#397fc8,  #93673e);
 	-webkit-background-clip: text;
 	animation: animate 12s linear infinite;
 	-webkit-background-size: 500%;
 	background-size: 500%;
+}
+
+span h2:nth-child(1) {
+	background-image:linear-gradient(to left, #397fc8,  #93673e, #397fc8,  #93673e,#397fc8,  #93673e);
+	margin-left: .19em;
+}
+span h2:nth-child(2) {
+	background-image:linear-gradient(to left, #397fc8,  #93673e,#397fc8,  #93673e);
+	margin-left: -.19em;
 }
