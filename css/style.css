@@ -1,22 +1,19 @@
 
-@keyframes animate{
-	0% {
-	  background-position: 100% 0;
-	}
-	50% {
-	  background-position: 0 100%;
-	}
-	100% {
-		background-position: 100% 0;
-	  }
-  }
 
-
-@keyframes change {
+@keyframes monolith {
 	to {
-			background-position:right;
-		}
+		background-position: top
 	}
+}
+
+@keyframes MOVE-BG {
+	from {
+	  background-transform: translateY(0);
+	}
+	to { 
+	  background-transform: translateY(-187%);
+	}
+ }
 
 * {
 	margin: 0;
@@ -26,7 +23,8 @@
 
 .svg_wrapper {
 	border: 0px solid grey;
-	width: 800px;
+	z-index: -1;
+	width: 100px;
 	margin: auto;
 }
 
@@ -74,18 +72,39 @@ div span h2{
 	font-size: 10em;
 	color: transparent;
 	text-transform: uppercase;
-	background-image:linear-gradient(to left,#397fc8,  #93673e);
+	background-image:linear-gradient(to bottom,#397fc8,  #93673e);
 	-webkit-background-clip: text;
-	animation: animate 12s linear infinite;
-	-webkit-background-size: 500%;
-	background-size: 500%;
+	animation: MOVE-BG 1s linear infinite;
 }
 
 span h2:nth-child(1) {
-	background-image:linear-gradient(to left, #397fc8,  #93673e, #397fc8,  #93673e,#397fc8,  #93673e);
+	background-image:linear-gradient(to bottom, #397fc8,  #93673e, #397fc8,  #93673e,#397fc8,  #93673e);
 	margin-left: .19em;
 }
 span h2:nth-child(2) {
-	background-image:linear-gradient(to left, #397fc8,  #93673e,#397fc8,  #93673e);
+	background-image:linear-gradient(to bottom, #397fc8,  #93673e,#397fc8,  #93673e);
 	margin-left: -.19em;
 }
+
+/* 
+
+#content {
+	height: 300px;
+	text-align: center;
+	font-size: 26px;
+	color: #000;
+	position:relative;
+  }
+  .bg{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: -1;
+	background: url(http://www.gstatic.com/webp/gallery/1.jpg) 0% 0% repeat;
+	animation-name: MOVE-BG;
+	animation-duration: 100s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+  } */
