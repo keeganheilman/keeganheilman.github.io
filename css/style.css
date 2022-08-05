@@ -6,26 +6,26 @@
 	}
 }
 
-@keyframes MOVE-BG {
-	from {
-	  background-transform: translateY(0);
-	}
-	to { 
-	  background-transform: translateY(-187%);
-	}
- }
-
+@keyframes animation {
+    from     {background-position: center 25%;}
+    to  {background-position: center 75%}
+}
+ 
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
 
+body { 
+	background-color: #b3b3b3;
+}
 .svg_wrapper {
 	border: 0px solid grey;
-	z-index: -1;
 	width: 100px;
 	margin: auto;
+	z-index: -1;
+	position:relative;
 }
 
 svg {
@@ -33,13 +33,20 @@ svg {
 	margin: auto;
 }
 
-body {
+.bg {
 	background: url("../assets/bg_transparent.png") no-repeat center center fixed;
-	-webkit-background-size: cover;
+	right: 0px;
+	bottom: 0px;
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+	/* -webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	background-color: #b3b3b3;
+	z-index: 1;
+	
+	background-size: 100%; */
 
 }
 
@@ -74,9 +81,14 @@ div span h2{
 	text-transform: uppercase;
 	background-image:linear-gradient(to bottom,#397fc8,  #93673e);
 	-webkit-background-clip: text;
-	animation: MOVE-BG 1s linear infinite;
+	animation-name: animation;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;    
+    animation-play-state: running;
+	/* transform: translate(-50%, -50%) */
 }
-
+/* 
 span h2:nth-child(1) {
 	background-image:linear-gradient(to bottom, #397fc8,  #93673e, #397fc8,  #93673e,#397fc8,  #93673e);
 	margin-left: .19em;
@@ -84,11 +96,9 @@ span h2:nth-child(1) {
 span h2:nth-child(2) {
 	background-image:linear-gradient(to bottom, #397fc8,  #93673e,#397fc8,  #93673e);
 	margin-left: -.19em;
-}
+} */
 
-/* 
-
-#content {
+/* #content {
 	height: 300px;
 	text-align: center;
 	font-size: 26px;
@@ -103,7 +113,7 @@ span h2:nth-child(2) {
 	bottom: 0;
 	z-index: -1;
 	background: url(http://www.gstatic.com/webp/gallery/1.jpg) 0% 0% repeat;
-	animation-name: MOVE-BG;
+	animation-name: animation;
 	animation-duration: 100s;
 	animation-timing-function: linear;
 	animation-iteration-count: infinite;

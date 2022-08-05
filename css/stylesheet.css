@@ -1,0 +1,90 @@
+
+@-webkit-keyframes FTanimation {
+    0%{background-position:50% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:50% 0%}
+}
+@-moz-keyframes FTanimation {
+    0%{background-position:50% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:50% 0%}
+}
+@keyframes FTanimation {
+    0%{background-position:50% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:50% 0%}
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+	border-color:blue;
+	border-width: 20;
+}
+
+.container {
+	background-color: #b3b3b3;
+	z-index: -1;
+	width:100%;
+}
+
+.bg {
+	background: url("../assets/bg_transparent.png");
+	background-position: cover cover;
+	background-size: cover;
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+}
+
+div span h2{
+	position: absolute;
+	width: 95%;
+	text-align: center;
+	margin: 0;
+	line-height: 1;
+	font-family: 'FreeSans';
+	font-size: 10em;
+	color: transparent;
+	text-transform: uppercase;
+	background:linear-gradient(to bottom,#397fc8,  #93673e);
+    background-size: 200% 200%;
+	-webkit-background-clip: text;
+    -webkit-animation: FTanimation 10s ease infinite;
+    -moz-animation: FTanimation 10s ease infinite;
+    animation: FTanimation 10s ease infinite;
+
+
+}
+
+
+span h2:nth-child(1) {
+	background-image:linear-gradient(to bottom, #93673e, #397fc8,  #93673e);
+	transform: translate(.19em, 0);
+	padding:0;
+}
+span h2:nth-child(2) {
+	background-image:linear-gradient(to bottom, #397fc8,  #93673e,#397fc8,  #93673e);
+	margin-left: -.19em;
+}
+
+
+
+#TimerDisplay {
+	color: #f3f3f3;
+	/* background-color: green; */
+	/* transform: translate(-50%, -50%); */
+	display:block;
+	position: absolute;
+	font-family: 'Liberation Sans Narrow', sans-serif;
+	font-style: italic;
+	-webkit-transform: rotate(-90deg);
+	/* float:right; */
+	font-size: 30em;
+	top: 40%;
+	left: 40%;
+	
+}
