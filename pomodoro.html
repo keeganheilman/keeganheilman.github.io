@@ -5,85 +5,61 @@
 		<link rel="stylesheet" href="css/stylesheet.css">
 	</head>
 <body>
-<div class="container">
-	<button>Start Timer</button>
-	<div id="Title">
-		<span>
-			<h2>FOCUS TIME</h2>
-			<h2>FOCUS TIME</h2>
-			<h2>FOCUS TIME</h2>
-		</span>
-	</div>
-	<div id="Timer">
-		<p id="TimerDisplay">00:00:00</p>
-	</div>
-	<div class="bg">
-	</div>
-	
-</div>
-</body>
-
-</html>
-
-
-
-
-<!-- <html>
-<head>
-	<meta charset="utf-8">
-	<title>pomodoro</title>
-	<link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-<button>Start Timer</button>
-<div id="Title">
+<div class="con">
 	<span>
-		<h2>FOCUS TIME</h2>
-		<h2>FOCUS TIME</h2>
-		<h2>FOCUS TIME</h2>
+		<div class="left">LEFT</div>
+		<div class="middle">
+			<div id="FTText">
+				<text>FOCUS TIME</text>
+				<text>FOCUS TIME</text>
+				<text>FOCUS TIME</text>
+			</div>
+			<div id="svg_wrapper">
+				<!-- <svg xmlns="http://www.w3.org/2000/svg">
+					<defs>
+					  <linearGradient id="gradient" x1="0%" y1="0%" x2="0" y2="100%">
+						<stop offset="0%" style="stop-color:skyblue;" />
+						<stop offset="100%" style="stop-color:seagreen;" />
+					  </linearGradient>
+					</defs>
+					<rect x="0" y="0" width="100%" height="100" fill="url(#gradient)"/>
+				</svg> -->
+			</div>
+		</div>
+		<div class="right">RIGHT</div>
 	</span>
+	<div class="bg"></div>
 </div>
 <div id="Timer">
 	<p id="TimerDisplay">00:00:00</p>
 </div>
-<div class="svg_wrapper">
-	<svg height=auto width=auto>
-			<rect x='0' y='5%' width="90%" height="90%"
-				fill="transparent" stroke="navy" stroke-width="1" />
-	</svg>
-</div>
-<div class="bg">
-	SOMETHING
-</div>
 <script>
-function startTimer(duration, display) {
-	var timer = duration, hour, minutes, seconds;
-	setInterval(function () {
-		hours = parseInt(timer / 3600, 10)
-		minutes = parseInt((timer / 60) % 60, 10)
-		seconds = parseInt(timer % 60, 10);
-		
-		hours = hours < 10 ? "0" + hours : hours;
-		minutes = minutes < 10 ? "0" + minutes : minutes;
-		seconds = seconds < 10 ? "0" + seconds : seconds;
-
-		display.textContent = hours + ":" + minutes + ":" + seconds;
-
-		if (--timer < 0) {
-			timer = 0;
-			// timer = duration; // uncomment this line to reset timer automatically after reaching 0
-		}
-	}, 1000);
-}
-
-window.onload = function () {
-var time = 3600 * 2, // your time in seconds here
-display = document.querySelector('#TimerDisplay');
-startTimer(time, display);
-};
-
-</script>
+	function startTimer(duration, display) {
+		var timer = duration, hour, minutes, seconds;
+		setInterval(function () {
+			hours = parseInt(timer / 3600, 10)
+			minutes = parseInt((timer / 60) % 60, 10)
+			seconds = parseInt(timer % 60, 10);
+			
+			hours = hours < 10 ? "0" + hours : hours;
+			minutes = minutes < 10 ? "0" + minutes : minutes;
+			seconds = seconds < 10 ? "0" + seconds : seconds;
+	
+			display.textContent = hours + ":" + minutes + ":" + seconds;
+	
+			if (--timer < 0) {
+				timer = 0;
+				// timer = duration; // uncomment this line to reset timer automatically after reaching 0
+			}
+		}, 1000);
+	}
+	
+	window.onload = function () {
+	var time = 3600 * 2, // your time in seconds here
+	display = document.querySelector('#TimerDisplay');
+	startTimer(time, display);
+	};
+	
+	</script>
 </body>
 </html>
- -->
