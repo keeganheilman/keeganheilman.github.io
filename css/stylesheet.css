@@ -70,6 +70,8 @@ html, body {
 
 #FTText {
 	width: 100%;
+	display:flex;
+	justify-content: center;
 	background-color: coral;
 	background-color: transparent;
 
@@ -78,7 +80,7 @@ html, body {
 text {
 	line-height: 1;
 	font-family: 'FreeSans';
-	font-size: 200px;
+	font-size: 150px;
 	font-weight: bold;
 	color: transparent;
 	text-transform: uppercase;
