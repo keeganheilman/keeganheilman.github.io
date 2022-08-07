@@ -142,7 +142,7 @@ text:nth-child(2) {
 }
 #monolith {
 	position: absolute; 
-	width: 35%;
+	width: 20%;
 	height: 95vh;
 	background-color:#397fc8;
 	bottom:0;
